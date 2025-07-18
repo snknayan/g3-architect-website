@@ -19,6 +19,7 @@
     /* eikhane ekta style diye, eita eibar jei jei div ba jekhane dorkar seikhane class e diye dibo */
 }
 
+
 /* dark-02 */
 .text-gray{
     color: #424242;
@@ -26,6 +27,9 @@
 /* dark-03 */
 .text-light-gray{
 color: #727272;
+}
+.text-primary{
+    color: #FF900E;
 }
 .bg-light{
     background-color: rgba(255, 144, 14, 0.1);
@@ -38,6 +42,18 @@ color: #727272;
     font-size: 1.25rem;
     border: none;
     border-radius: 8px;
+}
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+    /* eita diye overall sobgulo section e ekta gap diye dilam. */
+}
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700
 }
 /* header styles */
 
@@ -82,12 +98,47 @@ color: #727272;
    width: 100%; 
 }
 
+/* Team and features related styles */
 
+.teams{
+    align-items: center;
 
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.our-features{
+    margin-left: 80px;
+    max-width: 530px;
+}
+
+#quick-list{
+    font-weight: 500;
+}
 /* Responsive media query */
 @media screen and (max-width: 576px) {
-    .navbar, .nav-link{
+    .navbar, .nav-link, .teams{
         flex-direction: column;
     }
     
+    .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .our-features{
+        margin-left: 20px;
+    }
+}
+
+/* Medium size devices */
+
+@media screen and (min-width:576px) and (max-width:992px){
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 40px auto;
+    }
 }
